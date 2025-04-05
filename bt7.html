@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  students=[
+
+            { name: "Trần Trí Dương", scores: { math: 9, english: 8, literature : 7 } },
+
+            { name: "Hà Bích Ngọc", scores: { math: 3, english: 2, literature : 5} },
+
+            { name: "Bùi Thái Sơn", scores: { math: 9.5, english: 9, literature : 9 } }
+
+        ];
+        let averageScoreMoreThan8 = [];       
+        function averageScoreMorethan8 () {
+            for (let i = 0; i < students.length; i++) {
+                if ((students[i].scores.math + students[i].scores.english + students[i].scores.literature)/3 >= 8) {
+                    averageScoreMoreThan8.push(students[i]);
+                }
+            }
+            return averageScoreMoreThan8;
+        }
+        function main() {
+            averageScoreMorethan8();
+            console.table(averageScoreMoreThan8);
+        }
+        main();
+    </script>
+</body>
+</html>
